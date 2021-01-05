@@ -3,9 +3,12 @@ import bodyParser = require("body-parser")
 
 const app = express();
 
+
 app.use(bodyParser.json({
     limit: "50mb",
 }))
+
+app.route("/meow")
 
 app.get('/', (req, res) => {
     res.send("Meow!!!!!")
