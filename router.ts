@@ -1,30 +1,18 @@
 import express =  require("express")
-import bodyParser = require("body-parser")
+// import bodyParser = require("body-parser")
+import { CatController } from './services/cat/controller/controller'
 
 const app = express();
 
+// app.use(bodyParser.json({
+//     limit: "25mb",
+// }))
 
-app.use(bodyParser.json({
-    limit: "50mb",
-}))
+app.use('/cat',CatController)
 
-app.route("/meow")
-
-app.get('/', (req, res) => {
-    res.send("Meow!!!!!")
-})
-
-app.get('/:id/:meow', (req, res) => {
-    res.send(req.params)
-})
-
-app.post('/', (req, res) => {
-    res.send(req.body)
-})
-
-app.get('/health-check', (req, res) => {
+app.get('/health-check',(req,res) => {
     res.send({
-        Status: "Online"
+        Status:"Online"
     })
 })
 

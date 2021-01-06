@@ -4,13 +4,13 @@
 GET {{HOST}}/health-check HTTP/1.1
 
 ###
-GET {{HOST}}/ HTTP/1.1
+GET {{HOST}}/cat HTTP/1.1
 
 ###
-GET {{HOST}}/844b3871-152f-4d63-8a02-44119623e5f7/meowmi HTTP/1.1
+GET {{HOST}}/cat/844b3871-152f-4d63-8a02-44119623e5f7 HTTP/1.1
 
 ###
-POST {{HOST}}/ HTTP/1.1
+POST {{HOST}}/cat HTTP/1.1
 Content-Type: application/json
 
 {
